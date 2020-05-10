@@ -16,40 +16,44 @@ void main(){
 		
 		if ( potezB == true){
 			
-			do{
+			//do{
 				printf("\nBijeli igrač je na potezu: ");
 				potezB = false;
 				
-				fgets(bijeli, 7, stdin);
-				figura = bijeli[0];
+				fgets(bijeli, 6, stdin);
 			
-			} while ((figura <= 'A') || (figura >= 'Z' ));
+			//} while ( (figura != 'P') || (figura != 'L') || (figura != 'T') || (figura != 'S') || (figura != 'D') || (figura != 'K') );
 			
-			jSada = slovoUBroj (bijeli[1]);
+			jSada = slovoUBroj (bijeli[0]);
+			iSada = bijeli[1] - 49;
+			
 			jPosle = slovoUBroj (bijeli[3]);
+			iPosle = bijeli[4] -49;
 			
-			iSada = slovoUBroj (bijeli[2]);
-			iPosle = slovoUBroj (bijeli[4]);
+			figura = tabla [iSada] [jSada];
+			
 			
 			pomjeriFiguru (iSada, jSada, iPosle, jPosle, figura);
 
 
 		} else {
 			
-			do{
+			//do{
 				printf("\nCrni igrač je na potezu: ");
 				potezB = true ;
 				
-				fgets(bijeli, 7, stdin);
-				figura = bijeli[0];
+				fgets(crni, 6, stdin);
 				
-			} while ((figura <= 'a') || (figura >= 'z' ));
+			//} while ( (figura != 'p') || (figura != 'l') || (figura != 't') || (figura != 's') || (figura != 'd') || (figura != 'k') );
 			
-			jSada = slovoUBroj (crni[1]) - 1;
-			jPosle = slovoUBroj (crni[3]) - 1;
+				jSada = slovoUBroj (bijeli[0]);
+				iSada = bijeli[1] - 49;
+				
+				jPosle = slovoUBroj (bijeli[3]);
+				iPosle = bijeli[4] -49;
 			
-			iSada = slovoUBroj (crni[2]);
-			iPosle = slovoUBroj (crni[4]);
+			figura = tabla [iSada] [jSada];
+			
 			
 			pomjeriFiguru (iSada, jSada, iPosle, jPosle, figura);
 			

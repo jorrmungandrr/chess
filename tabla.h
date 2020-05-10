@@ -109,7 +109,7 @@ int slovoUBroj (char x){
 			break;
 			
 		default :
-			printf("Loše zadana pozicija");
+			printf("\nLoše zadana pozicija\n");
 			break;
 			
 	}
